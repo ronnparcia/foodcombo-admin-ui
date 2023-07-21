@@ -20,7 +20,7 @@
 <body>
     <div class="container">
         <!-- Navbar -->
-        <?php require("navbar.php"); ?>
+        <?php require("reusable-ui/navbar.php"); ?>
 
         <!-- Page Title -->
         <h1>Menu Items</h1>

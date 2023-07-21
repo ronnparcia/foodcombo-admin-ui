@@ -1,44 +1,65 @@
-<?php require("show-errors.php"); ?>
+<?php require("reusable-snippets/show-errors.php"); ?>
 
 <!DOCTYPE html>
 
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require("reusable-snippets/head.php"); ?>
     <title>Menu Items</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-    <!-- Custom Stylesheets -->
-    <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
+    <div class="container">
+        <!-- Navbar -->
+        <?php require("reusable-ui/navbar.php"); ?>
 
-    <h1>Edit</h1>
+        <!-- Page Title -->
+        <h1>Edit Menu Item</h1>
 
-    <form action="menu-edit-execute.php" method="post">
-        
-    </form>
+        <!-- Form -->
+        <form action="menu-edit-execute.php" method="post">
+            <!-- Item Name -->
+            <label for="" class="form-label">Item Name</label>
+            <input type="text" name="menu-item-name" class="form-text">
 
-    <?php
-    $itemID = $_POST["menu-item-id"];
-    echo $itemID;
+            <br />
 
-    require("connect-database.php");
-    $itemsSQL = "SELECT * FROM tbl_items WHERE item_id=$itemID";
-    $itemsQuery = mysqli_query($conn, $itemsSQL);
-    $itemsResult = mysqli_fetch_assoc($itemsQuery);
+            <!-- Category -->
+            <label for="">Category</label>
+            <select name="menu-item-category">
+                <option value="">Test</option>
+                <option value="">Test</option>
+                <option value="">Test</option>
+            </select>
 
-    echo $itemsResult["item_name"];
+            <br />
 
-    // echo "" + $itemsResult["item_id"] + " - " + $itemsResult["item_name"];
-    ?>
+            <!-- Price -->
+            <label for="">Price</label>
+            <input type="number" name="menu-item-price" class="form-number" />
 
+            <br />
+
+            <!-- Inventory -->
+            <label for="">Inventory Count</label>
+            <input type="number" name="menu-item-qty" class="form-number" />
+        </form>
+
+        <?php
+        $itemID = $_POST["menu-item-id"];
+        echo $itemID;
+
+        require("reusable-snippets/connect-database.php");
+        $itemsSQL = "SELECT * FROM tbl_items WHERE item_id=$itemID";
+        $itemsQuery = mysqli_query($conn, $itemsSQL);
+        $itemsResult = mysqli_fetch_assoc($itemsQuery);
+
+        echo $itemsResult["item_name"];
+
+        // echo "" + $itemsResult["item_id"] + " - " + $itemsResult["item_name"];
+        ?>
+    </div>
 </body>
 
 </html>

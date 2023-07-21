@@ -1,4 +1,4 @@
-<?php require("show-errors.php"); ?>
+<?php require("reusable-snippets/show-errors.php"); ?>
 
 <!DOCTYPE html>
 
@@ -30,7 +30,7 @@
         <div class="alert alert-success">Item successfully deleted.</div>
 
         <!-- Connect to Database -->
-        <?php require("connect-database.php"); ?>
+        <?php require("reusable-snippets/connect-database.php"); ?>
 
         <!-- Table of Items -->
         <table id="menu-table" class="table table-striped">

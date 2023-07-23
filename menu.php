@@ -18,12 +18,30 @@
         <!-- Page Title -->
         <h1>Menu Items</h1>
 
+
         <!-- Alert Boxes -->
-        <div class="alert alert-success">Item successfully edited.</div>
-        <div class="alert alert-success">Item successfully deleted.</div>
+        <?php 
+        // Successful Edit
+        if (isset($_GET["editSuccess"])) {
+            if ($_GET["editSuccess"] == 1) {
+                echo '<div class="alert alert-success">Item successfully edited.</div>';
+            }
+            // TODO: Add alert box for unsuccessful
+        }
+
+        // Successful Delete
+        if (isset($_GET["deleteSuccess"])) {
+            if ($_GET["deleteSuccess"] == 1) {
+                echo '<div class="alert alert-success">Item successfully deleted.</div>';
+            }
+            // TODO: Add alert box for unsuccessful
+        }
+        ?>
+
 
         <!-- Connect to Database -->
         <?php require("reusable-snippets/connect-database.php"); ?>
+
 
         <!-- Table of Items -->
         <table id="menu-table" class="table table-striped">
@@ -77,6 +95,7 @@
             </tbody>
         </table>
 
+        
         <!-- Close SQL Connection -->
         <?php mysqli_close($conn); ?>
 

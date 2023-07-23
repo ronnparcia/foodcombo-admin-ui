@@ -26,6 +26,24 @@
             echo '<div class="alert alert-warning">Warning: Select an item here first.</div>';
         }
 
+        // Attempted to access import XML page without uploading
+        if (isset($_GET["noFileUploaded"])) {
+            echo '<div class="alert alert-warning">Warning: Upload an XML file first.</div>';
+        }
+
+        // File upload failed
+        if (isset($_GET["uploadFailed"])) {
+            echo '<div class="alert alert-danger">Error: File upload failed.</div>';
+        }
+
+        if (isset($_GET["importSuccess"])) {
+            if ($_GET["importSuccess"] == 1) {
+                echo '<div class="alert alert-success">Items successfully imported.</div>';
+            } else {
+                echo '<div class="alert alert-danger">Error: Items not imported.</div>';
+            }
+        }
+
         // Successful Edit
         if (isset($_GET["editSuccess"])) {
             if ($_GET["editSuccess"] == 1) {

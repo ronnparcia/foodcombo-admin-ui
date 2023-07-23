@@ -43,7 +43,7 @@ else:
 
         <!-- Display item information -->
         <h4>Are you sure you want to delete this item?</h4>
-        <table class="table table-sm align-middle">
+        <table class="table align-middle">
             <thead>
                 <tr>
                     <th><!-- Icon --></th>

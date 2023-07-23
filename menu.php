@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navbar -->
-        <?php require("reusable-ui/navbar.php"); ?>
+    <!-- Navbar -->
+    <?php require("reusable-ui/navbar.php"); ?>
 
+    <!-- Page Body -->
+    <div class="container">
         <!-- Page Title -->
         <h1>Menu Items</h1>
 
@@ -47,8 +48,10 @@
                 ?>
 
                 <!-- Generate row for each record -->
-                <?php while ($itemsResult = mysqli_fetch_assoc($itemsQuery)) { ?>
+                <?php while ($itemsResult = mysqli_fetch_assoc($itemsQuery)) : ?>
+
                     <tr>
+                        <!-- Icon, Item Name, Category, Price, Inventory Count -->
                         <td><img src="<?php echo $itemsResult["image_url"]; ?>" /></td>
                         <td><?php echo $itemsResult["item_name"]; ?></td>
                         <td><?php echo $itemsResult["category_name"]; ?></td>
@@ -65,12 +68,12 @@
                         <td>
                             <form action="menu-delete.php" method="post">
                                 <input type="hidden" name="menu-item-id" value="<?php echo $itemsResult["item_id"]; ?>" />
-                                <input type="submit" name="menu-item-edit-btn" value="Delete" />
+                                <input type="submit" name="menu-item-delete-btn" value="Delete" />
                             </form>
                         </td>
                     </tr>
-                <?php } // Closing bracket for while statement 
-                ?>
+
+                <?php endwhile; ?>
             </tbody>
         </table>
 

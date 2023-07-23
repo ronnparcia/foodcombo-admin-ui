@@ -2,13 +2,14 @@
 
 nav {
     border-bottom: 1px solid lightgray;
-    padding: 10px;
+    padding: 10px 0;
     margin-bottom: 30px;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
 }
 
 nav li {

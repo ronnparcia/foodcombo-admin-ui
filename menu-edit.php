@@ -55,7 +55,6 @@
             <br />
 
             <!-- Category Dropdown -->
-            <!-- TODO: Input validation -->
             <label for="menu-item-category">Category</label>
             <select name="menu-item-category" class="form-select">
                 <!-- Create a dropdown option for each category -->

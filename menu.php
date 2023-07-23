@@ -101,6 +101,21 @@
             </tbody>
         </table>
 
+        <br/><br/>
+
+        <!-- Import XML -->
+        <form action="menu-import-xml.php" method="post" enctype="multipart/form-data">
+            <h3>Import XML Data</h3>
+
+            <!-- Upload Button -->
+            <input type="file" name="menu-uploaded-xml" />
+
+            <br/><br/>
+
+            <!-- Submit Button -->
+            <input type="submit" name="menu-import-xml-btn" value="Import XML" />
+        </form>
+
 
         <!-- Close SQL Connection -->
         <?php mysqli_close($conn); ?>

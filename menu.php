@@ -95,7 +95,7 @@
             </tbody>
         </table>
 
-        
+
         <!-- Close SQL Connection -->
         <?php mysqli_close($conn); ?>
 

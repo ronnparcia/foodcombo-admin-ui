@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<items>
+    <item>
+        <name>Lumpiang Shanghai</name>
+        <category>Sides</category>
+        <price>80</price>
+        <inventory>20</inventory>
+    </item>
+    <item>
+        <name>Buko Pandan</name>
+        <category>Sides</category>
+        <price>90</price>
+        <inventory>8</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Lechon Kawali</name>
+        <category>Mains</category>
+        <price>200</price>
+        <inventory>10</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Pancit Canton</name>
+        <category>Mains</category>
+        <price>120</price>
+        <inventory>15</inventory>
+    </item>
+    <item>
+        <name>Sago't Gulaman</name>
+        <category>Drinks</category>
+        <price>70</price>
+        <inventory>30</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+</items>

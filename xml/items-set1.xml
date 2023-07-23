@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<items>
+    <item>
+        <name>Kare-Kare</name>
+        <category>Mains</category>
+        <price>250</price>
+        <inventory>5</inventory>
+    </item>
+    <item>
+        <name>Halo-Halo</name>
+        <category>Drinks</category>
+        <price>120</price>
+        <inventory>15</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Adobo</name>
+        <category>Mains</category>
+        <price>150</price>
+        <inventory>25</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Sinigang</name>
+        <category>Mains</category>
+        <price>180</price>
+        <inventory>50</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Chopsuey</name>
+        <category>Sides</category>
+        <price>100</price>
+        <inventory>10</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+</items>

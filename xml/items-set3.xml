@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<items>
+    <item>
+        <name>Tinolang Manok</name>
+        <category>Mains</category>
+        <price>130</price>
+        <inventory>30</inventory>
+    </item>
+    <item>
+        <name>Sisig</name>
+        <category>Mains</category>
+        <price>180</price>
+        <inventory>40</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Buko Juice</name>
+        <category>Drinks</category>
+        <price>60</price>
+        <inventory>25</inventory>
+    </item>
+    <item>
+        <name>Laing</name>
+        <category>Sides</category>
+        <price>100</price>
+        <inventory>18</inventory>
+        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+    </item>
+    <item>
+        <name>Bicol Express</name>
+        <category>Mains</category>
+        <price>190</price>
+        <inventory>12</inventory>
+    </item>
+</items>

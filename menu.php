@@ -57,8 +57,9 @@
         if (isset($_GET["deleteSuccess"])) {
             if ($_GET["deleteSuccess"] == 1) {
                 echo '<div class="alert alert-success">Item successfully deleted.</div>';
+            } else {
+                echo '<div class="alert alert-danger">Error: Item not deleted.</div>';
             }
-            // TODO: Add alert box for unsuccessful
         }
         ?>
 

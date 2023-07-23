@@ -40,7 +40,6 @@
 
 
         <!-- Form -->
-        <!-- TODO: Add 'for' attribute to labels -->
         <form action="menu-edit-execute.php" method="post">
             <!-- Hidden Item ID -->
             <!-- TODO: Required validation -->
@@ -101,7 +100,7 @@
             <!-- Image URL -->
             <!-- TODO: Input validation -->
             <label for="menu-item-img-url">Image URL</label>
-            <input type="text" 
+            <input type="url" 
                    name="menu-item-img-url" 
                    value="<?php echo $itemToEditResult["image_url"]; ?>" 
                    size="80" 

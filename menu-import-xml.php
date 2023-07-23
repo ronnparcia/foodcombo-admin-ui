@@ -33,9 +33,9 @@ if (!isset($_FILES["menu-uploaded-xml"])) { // If no file uploaded
         // SQL
         require("reusable-snippets/connect-database.php");
         $insertSQL = "INSERT INTO tbl_items
-                        (item_name, category_name, price, inventory_qty, image_url)
-                        VALUES
-                        ('$name', '$category', $price, $inventory, '$imageURL')";
+                      (item_name, category_name, price, inventory_qty, image_url)
+                      VALUES
+                      ('$name', '$category', $price, $inventory, '$imageURL')";
 
         if ((mysqli_query($conn, $insertSQL))) {
             header("location:menu.php?importSuccess=1");

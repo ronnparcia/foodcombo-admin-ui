@@ -33,7 +33,6 @@
             } else {
                 echo '<div class="alert alert-danger">Error: Item not edited.</div>';
             }
-            // TODO: Add alert box for unsuccessful
         }
 
         // Successful Delete

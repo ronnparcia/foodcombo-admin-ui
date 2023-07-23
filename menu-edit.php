@@ -18,6 +18,7 @@
         <!-- Page Title -->
         <h1>Edit Menu Item</h1>
 
+
         <!-- Connect to Database -->
         <?php
         // Get selected item ID from menu.php
@@ -35,6 +36,7 @@
         $categoriesSQL = "SELECT * FROM tbl_categories";
         $categoriesQuery = mysqli_query($conn, $categoriesSQL);
         ?>
+
 
         <!-- Form -->
         <form action="menu-edit-execute.php" method="post">
@@ -105,6 +107,7 @@
                    value="Submit" />
         </form>
 
+        
         <!-- Close SQL Connection -->
         <?php mysqli_close($conn); ?>
 

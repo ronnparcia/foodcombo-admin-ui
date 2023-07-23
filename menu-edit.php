@@ -10,9 +10,10 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <?php require("reusable-ui/navbar.php"); ?>
+
     <div class="container">
-        <!-- Navbar -->
-        <?php require("reusable-ui/navbar.php"); ?>
 
         <!-- Page Title -->
         <h1>Edit Menu Item</h1>
@@ -42,61 +43,66 @@
 
             <!-- Item Name -->
             <label for="">Item Name</label>
-            <input 
-                type="text" 
-                name="menu-item-name" 
-                placeholder="<?php echo $itemToEditResult["item_name"]; ?>"
-            />
+            <input type="text" name="menu-item-name" value="<?php echo $itemToEditResult["item_name"]; ?>" class="form-control" />
 
             <br />
 
-            <!-- Category -->
+            <!-- Category Dropdown -->
             <label for="">Category</label>
-            <select name="menu-item-category">
-                <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) { ?>
-                    <option value="<?php echo $categoriesResult["category_name"]; ?>">
+            <select name="menu-item-category" class="form-control">
+                <!-- Create a dropdown option for each category -->
+                <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
+
+                    <!-- Identify if iterated category is current category of the selected item -->
+                    <?php
+                    $isCurrentCategory = false;
+                    if ($categoriesResult["category_name"] == $itemToEditResult["category_name"]) {
+                        $isCurrentCategory = true;
+                    }
+                    ?>
+                    
+                    <!-- Display dropdown option -->
+                    <option value="<?php echo $categoriesResult["category_name"]; ?>" <?php if ($isCurrentCategory) echo 'selected="selected"'; ?>>
                         <?php echo $categoriesResult["category_name"]; ?>
                     </option>
-                <?php } // Closing tag for while loop 
-                ?>
+
+                <?php endwhile; ?>
             </select>
 
             <br />
 
             <!-- Price -->
             <label for="">Price</label>
-            <input 
-                type="number" 
-                name="menu-item-price" 
-                class="form-number" 
-                placeholder="<?php echo $itemToEditResult["price"]; ?>" 
-            />
+            <input type="number" 
+                   name="menu-item-price" 
+                   value="<?php echo $itemToEditResult["price"]; ?>" 
+                   class="form-control" />
 
             <br />
 
             <!-- Inventory -->
             <label for="">Inventory Count</label>
-            <input 
-                type="number" 
-                name="menu-item-qty" 
-                placeholder="<?php echo $itemToEditResult["inventory_qty"]; ?>" 
-            />
+            <input type="number" 
+                   name="menu-item-qty" 
+                   value="<?php echo $itemToEditResult["inventory_qty"]; ?>" 
+                   class="form-control" />
 
             <br />
 
             <!-- Image URL -->
             <label for="">Image URL</label>
-            <input 
-                type="text" 
-                name="menu-item-img-url" 
-                placeholder="<?php echo $itemToEditResult["image_url"]; ?>" 
-                size="80"
-            />
+            <input type="text" 
+                   name="menu-item-img-url" 
+                   value="<?php echo $itemToEditResult["image_url"]; ?>" 
+                   size="80" 
+                   class="form-control" />
 
             <br />
 
             <!-- Submit -->
-            <input type="submit" name="menu-item-edit-execute-btn" value="Submit">
+            <input type="submit" 
+                   name="menu-item-edit-execute-btn" 
+                   value="Submit">
         </form>
 
         <!-- Close SQL Connection -->

@@ -50,11 +50,11 @@
             <!-- Heading -->
             <thead>
                 <tr>
-                    <th>Icon</th>
-                    <th>Item Name</th>
+                    <th></th>
+                    <th>Item</th>
                     <th>Category</th>
                     <th>Price</th>
-                    <th>Inventory Count</th>
+                    <th>Inventory</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>

@@ -46,7 +46,7 @@
 
 
         <!-- Table of Items -->
-        <table id="menu-table" class="table table-striped">
+        <table id="menu-table" class="table table-striped align-middle">
             <!-- Heading -->
             <thead>
                 <tr>

@@ -1,4 +1,13 @@
-<?php require("reusable-snippets/show-errors.php"); ?>
+<?php 
+require("reusable-snippets/show-errors.php"); 
+
+// TODO: Add conditions for login session
+
+// If this page was accessed without going through menu.php, go back to menu
+if (!isset($_POST["menu-item-id"])):
+    header("location:menu.php?noDataSent=1");
+else:
+?>
 
 <!DOCTYPE html>
 
@@ -6,27 +15,60 @@
 
 <head>
     <?php require("reusable-snippets/head.php"); ?>
-    <title>Menu Items</title>
+    <title>Delete Menu Item</title>
 </head>
 
 <body>
+    <!-- Navbar -->
+    <?php require("reusable-ui/navbar.php"); ?>
 
-    <h1>Delete</h1>
+    <div class="container">
 
-    <?php
-    $itemID = $_POST["menu-item-id"];
-    echo $itemID;
+        <!-- Page Title -->
+        <h1>Delete Menu Item</h1>
 
-    require("reusable-snippets/connect-database.php");
-    $itemsSQL = "SELECT * FROM tbl_items WHERE item_id=$itemID";
-    $itemsQuery = mysqli_query($conn, $itemsSQL);
-    $itemsResult = mysqli_fetch_assoc($itemsQuery);
+        <!-- Connect to Database -->
+        <?php 
+        // Get selected item ID from menu.php
+        $itemToDeleteID = $_POST["menu-item-id"];
 
-    echo $itemsResult["item_name"];
+        // Connect to database
+        require("reusable-snippets/connect-database.php");
 
-    echo "" + $itemsResult["item_id"] + " - " + $itemsResult["item_name"];
-    ?>
+        // Fetch item from database
+        $itemToDeleteSQL = "SELECT * FROM tbl_items WHERE item_id=$itemToDeleteID";
+        $itemToDeleteQuery = mysqli_query($conn, $itemToDeleteSQL);
+        $itemToDeleteResult = mysqli_fetch_assoc($itemToDeleteQuery);
+        ?>
+
+        <!-- Display item information -->
+        <h4>Are you sure you want to delete this item?</h4>
+        <table class="table table-sm align-middle">
+            <thead>
+                <tr>
+                    <th><!-- Icon --></th>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Inventory</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Icon, Item Name, Category, Price, Inventory Count -->
+                    <td><img src="<?php echo $itemToDeleteResult["image_url"]; ?>" /></td>
+                    <td><?php echo $itemToDeleteResult["item_name"]; ?></td>
+                    <td><?php echo $itemToDeleteResult["category_name"]; ?></td>
+                    <td><?php echo $itemToDeleteResult["price"]; ?></td>
+                    <td><?php echo $itemToDeleteResult["inventory_qty"]; ?></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 
 </body>
 
 </html>
+
+<?php endif; // Close if statement for if data was sent ?>

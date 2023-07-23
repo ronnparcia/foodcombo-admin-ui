@@ -50,7 +50,7 @@
             <!-- Heading -->
             <thead>
                 <tr>
-                    <th></th>
+                    <th><!-- Icon --></th>
                     <th>Item</th>
                     <th>Category</th>
                     <th>Price</th>

@@ -1,6 +1,8 @@
 <?php
 require("reusable-snippets/show-errors.php");
 
+// TODO: Add conditions for login session
+
 // Read XML File
 if (!isset($_FILES["menu-uploaded-xml"])) { // If no file uploaded
     header("location:menu.php?noFileUploaded=1");

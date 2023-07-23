@@ -51,7 +51,7 @@
 
             <!-- Category Dropdown -->
             <label for="">Category</label>
-            <select name="menu-item-category" class="form-control">
+            <select name="menu-item-category" class="form-select">
                 <!-- Create a dropdown option for each category -->
                 <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
 
@@ -64,7 +64,7 @@
                     ?>
 
                     <!-- Display dropdown option -->
-                    <option value="<?php echo $categoriesResult["category_name"]; ?>" <?php if ($isCurrentCategory) echo 'selected="selected"'; ?>>
+                    <option value="<?php echo $categoriesResult["category_name"]; ?>" <?php if ($isCurrentCategory) echo "selected"; ?> >
                         <?php echo $categoriesResult["category_name"]; ?>
                     </option>
 
@@ -107,7 +107,7 @@
                    value="Submit" />
         </form>
 
-        
+
         <!-- Close SQL Connection -->
         <?php mysqli_close($conn); ?>
 

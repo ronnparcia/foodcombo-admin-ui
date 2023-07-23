@@ -85,7 +85,7 @@
             <tbody>
                 <!-- SQL Statement and Query -->
                 <?php
-                $itemsSQL = "SELECT * FROM tbl_items ORDER BY category_name";
+                $itemsSQL = "SELECT * FROM tbl_items";
                 $itemsQuery = mysqli_query($conn, $itemsSQL);
                 ?>
 

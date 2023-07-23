@@ -18,10 +18,11 @@
         <!-- Page Title -->
         <h1>Edit Menu Item</h1>
 
-
+        
         <!-- Connect to Database -->
         <?php
         // Get selected item ID from menu.php
+        // TODO: Add an isset() condition if $itemToEditID was given
         $itemToEditID = $_POST["menu-item-id"];
 
         // Connect to database

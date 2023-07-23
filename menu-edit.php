@@ -42,13 +42,15 @@
         <!-- Form -->
         <form action="menu-edit-execute.php" method="post">
             <!-- Hidden Item ID -->
-            <!-- TODO: Required validation -->
-            <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>" />
+            <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>" required />
 
             <!-- Item Name -->
-            <!-- TODO: Required validation -->
             <label for="menu-item-name">Item Name</label>
-            <input type="text" name="menu-item-name" value="<?php echo $itemToEditResult["item_name"]; ?>" class="form-control" />
+            <input type="text" 
+                   name="menu-item-name" 
+                   value="<?php echo $itemToEditResult["item_name"]; ?>" 
+                   class="form-control"
+                   required />
 
             <br />
 
@@ -78,27 +80,29 @@
             <br />
 
             <!-- Price -->
-            <!-- TODO: Validate if positive decimal -->
             <label for="menu-item-price">Price</label>
             <input type="number" 
                    name="menu-item-price" 
                    value="<?php echo $itemToEditResult["price"]; ?>" 
-                   class="form-control" />
+                   class="form-control"
+                   min="0" 
+                   step=".01"
+                   required />
 
             <br />
 
             <!-- Inventory -->
-            <!-- TODO: Validate if positive INTEGER -->
             <label for="menu-item-qty">Inventory Count</label>
             <input type="number" 
                    name="menu-item-qty" 
                    value="<?php echo $itemToEditResult["inventory_qty"]; ?>" 
-                   class="form-control" />
+                   class="form-control"
+                   min="0"
+                   required />
 
             <br />
 
             <!-- Image URL -->
-            <!-- TODO: Input validation -->
             <label for="menu-item-img-url">Image URL</label>
             <input type="url" 
                    name="menu-item-img-url" 

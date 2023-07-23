@@ -39,7 +39,7 @@
         <!-- Form -->
         <form action="menu-edit-execute.php" method="post">
             <!-- Hidden Item ID -->
-            <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>">
+            <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>" />
 
             <!-- Item Name -->
             <label for="">Item Name</label>
@@ -60,7 +60,7 @@
                         $isCurrentCategory = true;
                     }
                     ?>
-                    
+
                     <!-- Display dropdown option -->
                     <option value="<?php echo $categoriesResult["category_name"]; ?>" <?php if ($isCurrentCategory) echo 'selected="selected"'; ?>>
                         <?php echo $categoriesResult["category_name"]; ?>
@@ -102,7 +102,7 @@
             <!-- Submit -->
             <input type="submit" 
                    name="menu-item-edit-execute-btn" 
-                   value="Submit">
+                   value="Submit" />
         </form>
 
         <!-- Close SQL Connection -->

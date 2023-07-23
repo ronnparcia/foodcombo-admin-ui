@@ -65,6 +65,11 @@ else:
             </tbody>
         </table>
 
+        <!-- Form to Delete -->
+        <form action="menu-delete-execute.php" method="post">
+            <input type="hidden" name="menu-item-id" value="<?php echo $itemToDeleteID; ?>" />
+            <input type="submit" name="menu-item-delete-btn" value="Delete" class="btn btn-danger" />
+        </form>
     </div>
 
 </body>

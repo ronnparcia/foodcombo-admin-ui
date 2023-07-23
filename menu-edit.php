@@ -48,14 +48,14 @@
 
             <!-- Item Name -->
             <!-- TODO: Required validation -->
-            <label for="">Item Name</label>
+            <label for="menu-item-name">Item Name</label>
             <input type="text" name="menu-item-name" value="<?php echo $itemToEditResult["item_name"]; ?>" class="form-control" />
 
             <br />
 
             <!-- Category Dropdown -->
             <!-- TODO: Input validation -->
-            <label for="">Category</label>
+            <label for="menu-item-category">Category</label>
             <select name="menu-item-category" class="form-select">
                 <!-- Create a dropdown option for each category -->
                 <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
@@ -80,7 +80,7 @@
 
             <!-- Price -->
             <!-- TODO: Validate if positive decimal -->
-            <label for="">Price</label>
+            <label for="menu-item-price">Price</label>
             <input type="number" 
                    name="menu-item-price" 
                    value="<?php echo $itemToEditResult["price"]; ?>" 
@@ -90,7 +90,7 @@
 
             <!-- Inventory -->
             <!-- TODO: Validate if positive INTEGER -->
-            <label for="">Inventory Count</label>
+            <label for="menu-item-qty">Inventory Count</label>
             <input type="number" 
                    name="menu-item-qty" 
                    value="<?php echo $itemToEditResult["inventory_qty"]; ?>" 
@@ -100,7 +100,7 @@
 
             <!-- Image URL -->
             <!-- TODO: Input validation -->
-            <label for="">Image URL</label>
+            <label for="menu-item-img-url">Image URL</label>
             <input type="text" 
                    name="menu-item-img-url" 
                    value="<?php echo $itemToEditResult["image_url"]; ?>" 

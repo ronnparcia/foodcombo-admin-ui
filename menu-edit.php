@@ -39,17 +39,21 @@
 
 
         <!-- Form -->
+        <!-- TODO: Add 'for' attribute to labels -->
         <form action="menu-edit-execute.php" method="post">
             <!-- Hidden Item ID -->
+            <!-- TODO: Required validation -->
             <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>" />
 
             <!-- Item Name -->
+            <!-- TODO: Required validation -->
             <label for="">Item Name</label>
             <input type="text" name="menu-item-name" value="<?php echo $itemToEditResult["item_name"]; ?>" class="form-control" />
 
             <br />
 
             <!-- Category Dropdown -->
+            <!-- TODO: Input validation -->
             <label for="">Category</label>
             <select name="menu-item-category" class="form-select">
                 <!-- Create a dropdown option for each category -->
@@ -74,6 +78,7 @@
             <br />
 
             <!-- Price -->
+            <!-- TODO: Validate if positive decimal -->
             <label for="">Price</label>
             <input type="number" 
                    name="menu-item-price" 
@@ -83,6 +88,7 @@
             <br />
 
             <!-- Inventory -->
+            <!-- TODO: Validate if positive INTEGER -->
             <label for="">Inventory Count</label>
             <input type="number" 
                    name="menu-item-qty" 
@@ -92,6 +98,7 @@
             <br />
 
             <!-- Image URL -->
+            <!-- TODO: Input validation -->
             <label for="">Image URL</label>
             <input type="text" 
                    name="menu-item-img-url" 

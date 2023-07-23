@@ -1,4 +1,13 @@
-<?php require("reusable-snippets/show-errors.php"); ?>
+<?php 
+require("reusable-snippets/show-errors.php"); 
+
+// TODO: Add conditions for login session
+
+// If this page was accessed without going through menu.php, go back to menu
+if (!isset($_POST["menu-item-id"])):
+    header("location:menu.php?noDataSent=1");
+else:
+?>
 
 <!DOCTYPE html>
 
@@ -125,3 +134,5 @@
 </body>
 
 </html>
+
+<?php endif; // Close if statement for if data was sent ?>

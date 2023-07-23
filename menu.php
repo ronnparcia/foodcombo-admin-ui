@@ -21,6 +21,11 @@
 
         <!-- Alert Boxes -->
         <?php 
+        // Attempted to access page without clicking edit or delete button
+        if (isset($_GET["noDataSent"])) {
+            echo '<div class="alert alert-warning">Warning: Select an item here first.</div>';
+        }
+
         // Successful Edit
         if (isset($_GET["editSuccess"])) {
             if ($_GET["editSuccess"] == 1) {

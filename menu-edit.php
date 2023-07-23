@@ -6,7 +6,7 @@
 
 <head>
     <?php require("reusable-snippets/head.php"); ?>
-    <title>Menu Items</title>
+    <title>Edit Menu Item</title>
 </head>
 
 <body>

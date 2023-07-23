@@ -25,6 +25,8 @@
         if (isset($_GET["editSuccess"])) {
             if ($_GET["editSuccess"] == 1) {
                 echo '<div class="alert alert-success">Item successfully edited.</div>';
+            } else {
+                echo '<div class="alert alert-danger">Error: Item not edited.</div>';
             }
             // TODO: Add alert box for unsuccessful
         }

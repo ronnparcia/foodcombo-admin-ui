@@ -14,6 +14,7 @@ if (!isset($_FILES["menu-uploaded-xml"])) { // If no file uploaded
     // TODO: Add mechanism to check if XML was successfully loaded/if it is an XML file
     $items = simplexml_load_file($filePath);
 
+    // TODO: Add check if there's already an item with the same name. Maybe 
     foreach ($items->item as $item) {
         // Name, category, price, inventory
         $name = $item->name;

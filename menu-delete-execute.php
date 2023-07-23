@@ -14,4 +14,6 @@ if (mysqli_query($conn, $deleteSQL)) {
     header("location:menu.php?deleteSuccess=0");
 }
 
+// TODO: Close connection
+
 ?>

@@ -27,4 +27,6 @@ if (mysqli_query($conn, $updateSQL)) {
     header("location:menu.php?editSuccess=0");
 }
 
+// TODO: Close connection
+
 ?>

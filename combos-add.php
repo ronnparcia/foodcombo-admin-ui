@@ -43,6 +43,15 @@ require("reusable-snippets/show-errors.php");
         <!-- Form -->
         <form action="combos-add-execute.php" method="post">
 
+            <!-- Combo Name -->
+            <label for="combo-name">Combo Name</label>
+            <input type="text" 
+                   name="combo-name" 
+                   class="form-control"
+                   required />
+
+            <br />
+
             <!-- Mains Dropdown -->
             <label for="combos-main">Main</label>
             <select name="combos-main" class="form-select">
@@ -90,6 +99,17 @@ require("reusable-snippets/show-errors.php");
             </select>
 
             <br />
+
+            <!-- Discount -->
+            <label for="combo-discount-pct">Discount (%)</label>
+            <input type="number" 
+                   name="combo-discount-pct" 
+                   class="form-control"
+                   min="1"
+                   max="100"
+                   required />
+
+            <br/>
 
             <!-- Submit -->
             <input type="submit" 

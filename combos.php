@@ -37,10 +37,10 @@ require("reusable-snippets/show-errors.php");
                 <tr>
                     <th>Combo ID</th>
                     <th>Combo Name</th>
-                    <th>Discount</th>
                     <th>Main</th>
                     <th>Side</th>
                     <th>Drink</th>
+                    <th>Discount</th>
                 </tr>
             </thead>
             <!-- Item Rows -->
@@ -64,10 +64,10 @@ require("reusable-snippets/show-errors.php");
                         <!-- Icon, Item Name, Category, Price, Inventory Count -->
                         <td><?php echo $combosResult["combo_id"]; ?></td>
                         <td><?php echo $combosResult["combo_name"]; ?></td>
-                        <td><?php echo $combosResult["discount_pct"]; ?></td>
                         <td><?php echo $combosResult["main_name"]; ?></td>
                         <td><?php echo $combosResult["side_name"]; ?></td>
                         <td><?php echo $combosResult["drink_name"]; ?></td>
+                        <td><?php echo ($combosResult["discount_pct"] * 100); ?>%</td>
                     </tr>
 
                 <?php endwhile; ?>

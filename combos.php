@@ -25,12 +25,18 @@ require("reusable-snippets/show-errors.php");
 
         <!-- Alert Boxes -->
         <?php 
+        // Successful add combo
         if (isset($_GET["addSuccess"])) {
             if ($_GET["addSuccess"] == 1) {
                 echo '<div class="alert alert-success">Combo successfully added.</div>';
             } else {
                 echo '<div class="alert alert-danger">Error: Combo not added.</div>';
             }
+        }
+
+        // Combo already exists
+        if (isset($_GET["comboAlreadyExists"])) {
+            echo '<div class="alert alert-danger">Error: Cannot add combo, it already exists (Combo ID #' . $_GET["comboAlreadyExists"] . ').</div>';
         }
         ?>
 

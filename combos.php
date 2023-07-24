@@ -24,7 +24,15 @@ require("reusable-snippets/show-errors.php");
 
 
         <!-- Alert Boxes -->
-        <!-- TODO: Add alert boxes -->
+        <?php 
+        if (isset($_GET["addSuccess"])) {
+            if ($_GET["addSuccess"] == 1) {
+                echo '<div class="alert alert-success">Combo successfully added.</div>';
+            } else {
+                echo '<div class="alert alert-danger">Error: Combo not added.</div>';
+            }
+        }
+        ?>
 
         <!-- Connect to Database -->
         <?php require("reusable-snippets/connect-database.php"); ?>

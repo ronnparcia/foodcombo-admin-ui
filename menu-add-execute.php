@@ -13,7 +13,7 @@ $imageURL = $_POST["menu-item-img-url"];
 
 // Check if imageURL is empty. Set a default value
 if ($imageURL == "") {
-    echo $imageURL = "https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/default.png";
+    $imageURL = "https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/default.png";
 }
 
 // SQL

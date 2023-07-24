@@ -44,6 +44,15 @@
             }
         }
 
+        // Successful Add
+        if (isset($_GET["addSuccess"])) {
+            if ($_GET["addSuccess"] == 1) {
+                echo '<div class="alert alert-success">Item successfully added.</div>';
+            } else {
+                echo '<div class="alert alert-danger">Error: Item not added.</div>';
+            }
+        }
+
         // Successful Edit
         if (isset($_GET["editSuccess"])) {
             if ($_GET["editSuccess"] == 1) {

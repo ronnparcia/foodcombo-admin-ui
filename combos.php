@@ -1,4 +1,8 @@
-<?php require("reusable-snippets/show-errors.php"); ?>
+<?php 
+require("reusable-snippets/show-errors.php"); 
+
+// TODO: Add conditions for login session
+?>
 
 <!DOCTYPE html>
 

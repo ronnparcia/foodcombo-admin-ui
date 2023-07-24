@@ -8,9 +8,12 @@ $name = $_POST["menu-item-name"];
 $category = $_POST["menu-item-category"];
 $price = $_POST["menu-item-price"];
 $qty = $_POST["menu-item-qty"];
-
-// TODO: Add check if imageURL is empty. Set a default value
 $imageURL = $_POST["menu-item-img-url"];
+
+// Check if imageURL is empty. Set a default value
+if ($imageURL == "") {
+    $imageURL = "https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/default.png";
+}
 
 // SQL
 $updateSQL = "UPDATE tbl_items

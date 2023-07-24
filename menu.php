@@ -104,14 +104,14 @@
                         <td>
                             <form action="menu-edit.php" method="post">
                                 <input type="hidden" name="menu-item-id" value="<?php echo $itemsResult["item_id"]; ?>" />
-                                <input type="submit" name="menu-item-edit-btn" value="Edit" />
+                                <input type="submit" name="menu-item-edit-btn" value="Edit" class="btn btn-sm btn-outline-secondary" />
                             </form>
                         </td>
                         <!-- Delete -->
                         <td>
                             <form action="menu-delete.php" method="post">
                                 <input type="hidden" name="menu-item-id" value="<?php echo $itemsResult["item_id"]; ?>" />
-                                <input type="submit" name="menu-item-delete-btn" value="Delete" />
+                                <input type="submit" name="menu-item-delete-btn" value="Delete" class="btn btn-sm btn-outline-secondary" />
                             </form>
                         </td>
                     </tr>
@@ -135,12 +135,12 @@
             <h3>Import XML Data</h3>
 
             <!-- Upload Button -->
-            <input type="file" name="menu-uploaded-xml" />
+            <input type="file" name="menu-uploaded-xml" class="form-control" />
 
-            <br/><br/>
+            <br/>
 
             <!-- Submit Button -->
-            <input type="submit" name="menu-import-xml-btn" value="Import XML" />
+            <input type="submit" name="menu-import-xml-btn" value="Import XML" class="btn btn-outline-primary" />
         </form>
 
 

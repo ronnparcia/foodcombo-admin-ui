@@ -79,7 +79,7 @@ require("reusable-snippets/show-errors.php");
         
         <!-- Add Item -->
         <h3>Add New Combo Item</h3>
-        <a href="combo-add.php" class="btn btn-outline-primary">Add New Combo</a>
+        <a href="combos-add.php" class="btn btn-outline-primary">Add New Combo</a>
 
 
         <br/><br/>

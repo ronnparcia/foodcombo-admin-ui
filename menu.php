@@ -120,6 +120,14 @@
             </tbody>
         </table>
 
+        
+        <br/><br/>
+        
+        <!-- Add Item -->
+        <h3>Add New Menu Item</h3>
+        <a href="menu-add.php" class="btn btn-outline-primary">Add Item</a>
+
+
         <br/><br/>
 
         <!-- Import XML -->

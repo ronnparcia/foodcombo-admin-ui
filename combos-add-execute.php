@@ -12,6 +12,7 @@ $mainID  = $_POST["combos-main"];
 $sideID  = $_POST["combos-side"];
 $drinkID = $_POST["combos-drink"];
 
+// BUG: Unable to proceed with request when the combo has an apostrophe
 
 // Check if the combo is already in the database
 $existingComboSQL = "SELECT * FROM tbl_combos

@@ -25,20 +25,20 @@ if (isset($_POST["login-submit-btn"])) {
             $accountResult = mysqli_fetch_assoc($accountQuery);
 
             // Store account details in session variables
-            $_SESSION["account_id"] = $accountResult["account_id"];
+            $_SESSION["account_id"] = $accountResult["id"];
             $_SESSION["account_name"] = $accountResult["name"];
             $_SESSION["account_username"] = $accountResult["username"];
 
-            // Redirect to menu.php
+            // // Redirect to menu.php
             header("location:menu.php");
         } else {
             // echo "Incorrect username and/or password.";
-            // Redirect to login-page.php
-            header("location:login-page.php?wrongCredentials=1");
+            // Redirect to login-form.php
+            header("location:login-form.php?wrongCredentials=1");
         }
     } else {
         // echo "Query failed";
-        // header("location:login-page.php?queryFailed=1");
+        header("location:login-form.php?queryFailed=1");
     }
 }
 

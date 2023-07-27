@@ -89,7 +89,7 @@ else:
 
 
         <!-- Table of Items -->
-        <table id="menu-table" class="table table-striped align-middle">
+        <table id="menu-table" class="table table-striped table-sm align-middle">
             <!-- Heading -->
             <thead>
                 <tr>

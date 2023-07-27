@@ -1,4 +1,6 @@
 <?php 
+// TODO: Add condition that checks if the submit button was clicked. Do this for the rest of the form redirects.
+
 // Connect to database
 require("reusable-snippets/connect-database.php");
 

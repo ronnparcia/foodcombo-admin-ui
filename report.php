@@ -1,7 +1,14 @@
 <?php 
 require("reusable-snippets/show-errors.php"); 
 
-// TODO: Add conditions for login session
+// Begin session
+session_start();
+
+// If there is no session variable for the account id, redirect back to login.php
+// Otherwise, display HTML content
+if (!isset($_SESSION["account_id"])):
+    header("location:login-form.php?notLoggedIn=1");
+else:
 ?>
 
 <!DOCTYPE html>
@@ -100,3 +107,5 @@ require("reusable-snippets/show-errors.php");
 </body>
 
 </html>
+
+<?php endif; // End of else for if (!isset($_SESSION["account_id"])) ?>

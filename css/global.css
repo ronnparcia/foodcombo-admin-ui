@@ -1,3 +1,9 @@
+/* Variables */
+
+:root {
+    --maroon: #2C202D;
+}
+
 /* Typography */
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
@@ -9,9 +15,11 @@
 /* Navbar */
 
 nav {
-    border-bottom: 1px solid lightgray;
     padding: 10px 0;
     margin-bottom: 30px;
+
+    background-color: var(--maroon);
+    border-bottom: 1px solid lightgray;
 }
 
 nav ul {

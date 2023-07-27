@@ -22,7 +22,7 @@ if (isset($_POST["login-submit-btn"])) {
             session_start();
 
             // Fetch account details
-            $accountResult = mysqli_fetch_row($accountQuery);
+            $accountResult = mysqli_fetch_assoc($accountQuery);
 
             // Store account details in session variables
             $_SESSION["account_id"] = $accountResult["account_id"];

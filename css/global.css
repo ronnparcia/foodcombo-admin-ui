@@ -15,7 +15,7 @@
 /* Navbar */
 
 nav {
-    padding: 10px 0;
+    padding: 20px 0;
     margin-bottom: 30px;
 
     background-color: var(--maroon);
@@ -40,6 +40,11 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+nav #logo,
+nav #logout-wrapper {
+    width: 175px;
 }
 
 /* Tables */

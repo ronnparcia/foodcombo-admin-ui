@@ -118,7 +118,7 @@ else:
                         <td><img src="<?php echo $itemsResult["image_url"]; ?>" /></td>
                         <td><?php echo $itemsResult["item_name"]; ?></td>
                         <td><?php echo $itemsResult["category_name"]; ?></td>
-                        <td><?php echo $itemsResult["price"]; ?></td>
+                        <td>₱ <?php echo $itemsResult["price"]; ?></td>
                         <td><?php echo $itemsResult["inventory_qty"]; ?></td>
                         <!-- Edit -->
                         <td>

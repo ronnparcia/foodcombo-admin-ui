@@ -33,6 +33,15 @@ nav li {
     margin-right: 20px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Tables */
 
 .table img {

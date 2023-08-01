@@ -27,7 +27,9 @@ else:
     <div class="container">
 
         <!-- Page Title -->
-        <h1>Add New Combo</h1>
+        <div class="my-5">
+            <h1 class="page-title mb-1">Add Combo</h1>
+        </div>
 
         
         <!-- Connect to Database -->

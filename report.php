@@ -101,7 +101,10 @@ else:
                 </table>
                 <!-- Generate XML -->
                 <?php require("report-generate-xml.php"); ?>
-                <a href="<?php echo $filePath; ?>" download>Export as XML</a>
+                <a href="<?php echo $filePath; ?>"
+                   class="btn btn-outline-primary"
+                   download>
+                Export as XML</a>
             <?php endif; // For if (hasOrders) ?>
 
         <?php endif; // For if (isset) ?>

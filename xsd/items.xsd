@@ -5,7 +5,7 @@
         <xsd:complexType>
             <xsd:sequence>
                 <!-- Reference to "item" tag -->
-                <xsd:element ref="item" minOccurs="1" maxOccurs="unbounded" />
+                <xsd:element ref="item" maxOccurs="unbounded" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

@@ -72,6 +72,10 @@ nav #logout-wrapper {
 
 /* Tables */
 
+.table {
+    box-shadow: var(--shadow-md);
+}
+
 .table img {
     /* Table Icons */
     width: 30px;

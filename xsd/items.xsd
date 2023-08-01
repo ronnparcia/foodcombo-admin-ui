@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- Root "items" -->
+    <xsd:element name="items">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- Reference to "item" tag -->
+                <xsd:element ref="item" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Referenced Item -->
+    <xsd:element name="item">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="name" />
+                <xsd:element ref="category" />
+                <xsd:element ref="price" />
+                <xsd:element ref="inventory" />
+                <xsd:element ref="image" minOccurs="0" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- References children of Items -->
+    <xsd:element name="name" type="xsd:string" />
+
+    <xsd:element name="category">
+        <xsd:simpleType>
+            <!-- Category must only be Mains, Drinks, or Sides -->
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Mains" />
+                <xsd:enumeration value="Sides" />
+                <xsd:enumeration value="Drinks" />
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="price">
+        <xsd:simpleType>
+            <!-- Price must only be positive decimal -->
+            <xsd:restriction base="xsd:decimal">
+                <xsd:minInclusive value="0" />
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <!-- Inventory must be positive integer -->
+    <xsd:element name="inventory" type="xsd:positiveInteger" />
+
+    <xsd:element name="image">
+        <xsd:simpleType>
+            <!-- URI must be an image -->
+            <xsd:restriction base="xsd:anyURI">
+                <xsd:pattern value=".+\.(jpg|jpeg|png)" />
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+</xsd:schema>

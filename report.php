@@ -27,7 +27,13 @@ else:
     <!-- Page Body -->
     <div class="container">
         <!-- Page Title -->
-        <h1>Daily Report</h1>
+        <div class="my-5">
+            <!-- Page Title and Subtitle -->
+            <div>
+                <h1 class="page-title mb-1">Daily Report</h1>
+                <p class="page-subtitle">View and/or export a summary report for a selected date</p>
+            </div>
+        </div>
 
         <!-- Form -->
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

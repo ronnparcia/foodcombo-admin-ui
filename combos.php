@@ -17,6 +17,7 @@ else:
 
 <head>
     <?php require("reusable-snippets/head.php"); ?>
+    <link rel="stylesheet" href="css/combos.css">
     <title>Combos</title>
 </head>
 
@@ -60,50 +61,52 @@ else:
         <!-- Connect to Database -->
         <?php require("reusable-snippets/connect-database.php"); ?>
 
-
         <!-- List of Combos -->
-        <table id="combos-table" class="table table-striped align-middle">
-            <!-- Heading -->
-            <thead>
-                <tr>
-                    <th>Combo ID</th>
-                    <th>Combo Name</th>
-                    <th>Main</th>
-                    <th>Side</th>
-                    <th>Drink</th>
-                    <th>Discount</th>
-                </tr>
-            </thead>
-            <!-- Item Rows -->
-            <tbody>
-                <!-- SQL Statement and Query -->
-                <?php
-                $combosSQL = "SELECT c.combo_id, c.combo_name, c.discount_pct,
-	                                 m.item_name AS main_name, m.image_url AS main_img,
-                                     s.item_name AS side_name, s.image_url AS side_img,
-                                     d.item_name AS drink_name, d.image_url AS drink_img
-                              FROM tbl_combos c JOIN tbl_items m ON c.main_item_id = m.item_id 
-                                                JOIN tbl_items s ON c.side_item_id = s.item_id
-                                                JOIN tbl_items d ON c.drink_item_id = d.item_id";
-                $combosQuery = mysqli_query($conn, $combosSQL);
-                ?>
+        <div class="row row-cols-4 g-4">
+            <?php
+            $combosSQL = "SELECT c.combo_id, c.combo_name, c.discount_pct,
+                                    m.item_name AS main_name, m.image_url AS main_img,
+                                    s.item_name AS side_name, s.image_url AS side_img,
+                                    d.item_name AS drink_name, d.image_url AS drink_img
+                            FROM tbl_combos c JOIN tbl_items m ON c.main_item_id = m.item_id 
+                                            JOIN tbl_items s ON c.side_item_id = s.item_id
+                                            JOIN tbl_items d ON c.drink_item_id = d.item_id";
+            $combosQuery = mysqli_query($conn, $combosSQL);
+            ?>
 
-                <!-- Generate row for each record -->
-                <?php while ($combosResult = mysqli_fetch_assoc($combosQuery)) : ?>
+            <!-- Generate row for each record -->
+            <?php while ($combosResult = mysqli_fetch_assoc($combosQuery)) : ?>
 
-                    <tr>
-                        <!-- Icon, Item Name, Category, Price, Inventory Count -->
-                        <td><?php echo $combosResult["combo_id"]; ?></td>
-                        <td><?php echo $combosResult["combo_name"]; ?></td>
-                        <td><?php echo $combosResult["main_name"]; ?></td>
-                        <td><?php echo $combosResult["side_name"]; ?></td>
-                        <td><?php echo $combosResult["drink_name"]; ?></td>
-                        <td><?php echo ($combosResult["discount_pct"] * 100); ?>%</td>
-                    </tr>
+                <div class="col">
+                    <div class="combo-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <p class="combo-id"><?php echo $combosResult["combo_id"]; ?></p>
+                            <div>
+                                <h2 class="combo-name mb-1"><?php echo $combosResult["combo_name"]; ?></h2>
+                                <p class="combo-discount"><?php echo ($combosResult["discount_pct"] * 100); ?>% Discount</p>
+                            </div>
+                        </div>
+                        
 
-                <?php endwhile; ?>
-            </tbody>
-        </table>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center">
+                                <img src="<?php echo $combosResult["main_img"]; ?>" class="combo-img">
+                                <?php echo $combosResult["main_name"]; ?>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <img src="<?php echo $combosResult["side_img"]; ?>" class="combo-img">
+                                <?php echo $combosResult["side_name"]; ?>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <img src="<?php echo $combosResult["drink_img"]; ?>" class="combo-img">
+                                <?php echo $combosResult["drink_name"]; ?>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            <?php endwhile; ?>
+        </div>
 
 
         <!-- Close SQL Connection -->

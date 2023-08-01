@@ -1,0 +1,26 @@
+.combo-card {
+    padding: 20px;
+    background-color: white;
+}
+
+.combo-name {
+    font-size: 18px;
+    color: var(--magenta);
+}
+
+.combo-discount {
+    font-size: 15px;
+}
+
+.combo-img {
+    width: 30px;
+    margin-right: 16px;
+}
+
+.combo-id {
+    font-size: 20px;
+    padding-right: 16px;
+    margin-right: 16px;
+    border-right: 1px solid var(--magenta);
+    color: var(--magenta);
+}

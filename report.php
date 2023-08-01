@@ -35,22 +35,24 @@ else:
             </div>
         </div>
 
-        <!-- Form -->
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="white-box">
+            <!-- Form -->
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
-            <!-- Date -->
-            <label for="report-date">Select date:</label>
-            <input type="date" 
-                   name="report-date" 
-                   max="<?php echo date("Y-m-d"); ?>"
-                   class="form-control w-50" 
-                   required>
+                <!-- Date -->
+                <label for="report-date">Select date:</label>
+                <input type="date" 
+                    name="report-date" 
+                    max="<?php echo date("Y-m-d"); ?>"
+                    class="form-control w-75" 
+                    required>
 
-            <br/>
+                <br/>
 
-            <!-- Submit Button -->
-            <input type="submit" name="report-submit-btn" value="Generate Report" class="btn btn-outline-primary" />
-        </form>
+                <!-- Submit Button -->
+                <input type="submit" name="report-submit-btn" value="Generate Report" class="btn btn-outline-primary" />
+            </form>
+        </div>
         
         <br/><br/>
 
@@ -89,28 +91,30 @@ else:
 
             <!-- Display record -->
             <?php if ($hasOrders): ?>
-                <!-- Show report details -->
-                <h4>Report for <?php echo date('F d, Y', strtotime($date)); ?></h4>
-                <table class="table w-50">
-                    <tr>
-                        <td>Total dishes sold: </td>
-                        <td><?php echo $totalDishes; ?></td>
-                    </tr>
-                    <tr>
-                        <td>Total discounts given: </td>
-                        <td>Php <?php echo $totalDiscount; ?></td>
-                    </tr>
-                    <tr>
-                        <td>Total earnings: </td>
-                        <td>Php <?php echo $totalEarned; ?></td>
-                    </tr>
-                </table>
-                <!-- Generate XML -->
-                <?php require("report-generate-xml.php"); ?>
-                <a href="<?php echo $filePath; ?>"
-                   class="btn btn-outline-primary"
-                   download>
-                Export as XML</a>
+                <div class="white-box">
+                    <!-- Show report details -->
+                    <h4>Report for <?php echo date('F d, Y', strtotime($date)); ?></h4>
+                    <table class="table w-50">
+                        <tr>
+                            <td>Total dishes sold: </td>
+                            <td><?php echo $totalDishes; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Total discounts given: </td>
+                            <td>Php <?php echo $totalDiscount; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Total earnings: </td>
+                            <td>Php <?php echo $totalEarned; ?></td>
+                        </tr>
+                    </table>
+                    <!-- Generate XML -->
+                    <?php require("report-generate-xml.php"); ?>
+                    <a href="<?php echo $filePath; ?>"
+                    class="btn btn-outline-primary"
+                    download>
+                    Export as XML</a>
+                </div>
             <?php endif; // For if (hasOrders) ?>
 
         <?php endif; // For if (isset) ?>

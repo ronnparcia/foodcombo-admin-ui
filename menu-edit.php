@@ -56,84 +56,85 @@ else:
         $categoriesQuery = mysqli_query($conn, $categoriesSQL);
         ?>
 
+        <div class="white-box">
+            <!-- Form -->
+            <form action="menu-edit-execute.php" method="post">
+                <!-- Hidden Item ID -->
+                <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>" required />
 
-        <!-- Form -->
-        <form action="menu-edit-execute.php" method="post">
-            <!-- Hidden Item ID -->
-            <input type="hidden" name="menu-item-id" value="<?php echo $itemToEditID; ?>" required />
+                <!-- Item Name -->
+                <label for="menu-item-name">Item Name</label>
+                <input type="text" 
+                    name="menu-item-name" 
+                    value="<?php echo $itemToEditResult["item_name"]; ?>" 
+                    class="form-control"
+                    required />
 
-            <!-- Item Name -->
-            <label for="menu-item-name">Item Name</label>
-            <input type="text" 
-                   name="menu-item-name" 
-                   value="<?php echo $itemToEditResult["item_name"]; ?>" 
-                   class="form-control"
-                   required />
+                <br />
 
-            <br />
+                <!-- Category Dropdown -->
+                <label for="menu-item-category">Category</label>
+                <select name="menu-item-category" class="form-select">
+                    <!-- Create a dropdown option for each category -->
+                    <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
 
-            <!-- Category Dropdown -->
-            <label for="menu-item-category">Category</label>
-            <select name="menu-item-category" class="form-select">
-                <!-- Create a dropdown option for each category -->
-                <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
+                        <!-- Identify if iterated category is current category of the selected item -->
+                        <?php
+                        $isCurrentCategory = false;
+                        if ($categoriesResult["category_name"] == $itemToEditResult["category_name"]) {
+                            $isCurrentCategory = true;
+                        }
+                        ?>
 
-                    <!-- Identify if iterated category is current category of the selected item -->
-                    <?php
-                    $isCurrentCategory = false;
-                    if ($categoriesResult["category_name"] == $itemToEditResult["category_name"]) {
-                        $isCurrentCategory = true;
-                    }
-                    ?>
+                        <!-- Display dropdown option -->
+                        <option value="<?php echo $categoriesResult["category_name"]; ?>" <?php if ($isCurrentCategory) echo "selected"; ?> >
+                            <?php echo $categoriesResult["category_name"]; ?>
+                        </option>
 
-                    <!-- Display dropdown option -->
-                    <option value="<?php echo $categoriesResult["category_name"]; ?>" <?php if ($isCurrentCategory) echo "selected"; ?> >
-                        <?php echo $categoriesResult["category_name"]; ?>
-                    </option>
+                    <?php endwhile; ?>
+                </select>
 
-                <?php endwhile; ?>
-            </select>
+                <br />
 
-            <br />
+                <!-- Price -->
+                <label for="menu-item-price">Price</label>
+                <input type="number" 
+                    name="menu-item-price" 
+                    value="<?php echo $itemToEditResult["price"]; ?>" 
+                    class="form-control"
+                    min="0" 
+                    step=".01"
+                    required />
 
-            <!-- Price -->
-            <label for="menu-item-price">Price</label>
-            <input type="number" 
-                   name="menu-item-price" 
-                   value="<?php echo $itemToEditResult["price"]; ?>" 
-                   class="form-control"
-                   min="0" 
-                   step=".01"
-                   required />
+                <br />
 
-            <br />
+                <!-- Inventory -->
+                <label for="menu-item-qty">Inventory Count</label>
+                <input type="number" 
+                    name="menu-item-qty" 
+                    value="<?php echo $itemToEditResult["inventory_qty"]; ?>" 
+                    class="form-control"
+                    min="0"
+                    required />
 
-            <!-- Inventory -->
-            <label for="menu-item-qty">Inventory Count</label>
-            <input type="number" 
-                   name="menu-item-qty" 
-                   value="<?php echo $itemToEditResult["inventory_qty"]; ?>" 
-                   class="form-control"
-                   min="0"
-                   required />
+                <br />
 
-            <br />
+                <!-- Image URL -->
+                <label for="menu-item-img-url">Image URL</label>
+                <input type="url" 
+                    name="menu-item-img-url" 
+                    value="<?php echo $itemToEditResult["image_url"]; ?>" 
+                    size="80" 
+                    class="form-control" />
 
-            <!-- Image URL -->
-            <label for="menu-item-img-url">Image URL</label>
-            <input type="url" 
-                   name="menu-item-img-url" 
-                   value="<?php echo $itemToEditResult["image_url"]; ?>" 
-                   size="80" 
-                   class="form-control" />
+                <br />
 
-            <br />
-
-            <!-- Submit -->
-            <input type="submit" 
-                   name="menu-item-edit-execute-btn" 
-                   value="Submit" />
-        </form>
+                <!-- Submit -->
+                <input type="submit" 
+                    name="menu-item-edit-execute-btn" 
+                    value="Submit" />
+            </form>
+        </div>
 
 
         <!-- Close SQL Connection -->

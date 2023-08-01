@@ -51,35 +51,37 @@ else:
         $itemToDeleteResult = mysqli_fetch_assoc($itemToDeleteQuery);
         ?>
 
-        <!-- Display item information -->
-        <h4>Are you sure you want to delete this item?</h4>
-        <table class="table align-middle">
-            <thead>
-                <tr>
-                    <th><!-- Icon --></th>
-                    <th>Item</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Inventory</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <!-- Icon, Item Name, Category, Price, Inventory Count -->
-                    <td><img src="<?php echo $itemToDeleteResult["image_url"]; ?>" /></td>
-                    <td><?php echo $itemToDeleteResult["item_name"]; ?></td>
-                    <td><?php echo $itemToDeleteResult["category_name"]; ?></td>
-                    <td><?php echo $itemToDeleteResult["price"]; ?></td>
-                    <td><?php echo $itemToDeleteResult["inventory_qty"]; ?></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="white-box">
+            <!-- Display item information -->
+            <h4>Are you sure you want to delete this item?</h4>
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th><!-- Icon --></th>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Inventory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Icon, Item Name, Category, Price, Inventory Count -->
+                        <td><img src="<?php echo $itemToDeleteResult["image_url"]; ?>" /></td>
+                        <td><?php echo $itemToDeleteResult["item_name"]; ?></td>
+                        <td><?php echo $itemToDeleteResult["category_name"]; ?></td>
+                        <td><?php echo $itemToDeleteResult["price"]; ?></td>
+                        <td><?php echo $itemToDeleteResult["inventory_qty"]; ?></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <!-- Form to Delete -->
-        <form action="menu-delete-execute.php" method="post">
-            <input type="hidden" name="menu-item-id" value="<?php echo $itemToDeleteID; ?>" />
-            <input type="submit" name="menu-item-delete-btn" value="Delete" class="btn btn-danger" />
-        </form>
+            <!-- Form to Delete -->
+            <form action="menu-delete-execute.php" method="post">
+                <input type="hidden" name="menu-item-id" value="<?php echo $itemToDeleteID; ?>" />
+                <input type="submit" name="menu-item-delete-btn" value="Delete" class="btn btn-danger" />
+            </form>
+        </div>
     </div>
 
 </body>

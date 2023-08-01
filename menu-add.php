@@ -43,69 +43,71 @@ else:
         ?>
 
 
-        <!-- Form -->
-        <form action="menu-add-execute.php" method="post">
+        <div class="white-box">
+            <!-- Form -->
+            <form action="menu-add-execute.php" method="post">
 
-            <!-- Item Name -->
-            <label for="menu-item-name">Item Name</label>
-            <input type="text" 
-                   name="menu-item-name" 
-                   class="form-control"
-                   required />
+                <!-- Item Name -->
+                <label for="menu-item-name">Item Name</label>
+                <input type="text" 
+                    name="menu-item-name" 
+                    class="form-control"
+                    required />
 
-            <br />
+                <br />
 
-            <!-- Category Dropdown -->
-            <label for="menu-item-category">Category</label>
-            <select name="menu-item-category" class="form-select">
-                <!-- Create a dropdown option for each category -->
-                <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
+                <!-- Category Dropdown -->
+                <label for="menu-item-category">Category</label>
+                <select name="menu-item-category" class="form-select">
+                    <!-- Create a dropdown option for each category -->
+                    <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
 
-                    <!-- Display dropdown option -->
-                    <option value="<?php echo $categoriesResult["category_name"]; ?>">
-                        <?php echo $categoriesResult["category_name"]; ?>
-                    </option>
+                        <!-- Display dropdown option -->
+                        <option value="<?php echo $categoriesResult["category_name"]; ?>">
+                            <?php echo $categoriesResult["category_name"]; ?>
+                        </option>
 
-                <?php endwhile; ?>
-            </select>
+                    <?php endwhile; ?>
+                </select>
 
-            <br />
+                <br />
 
-            <!-- Price -->
-            <label for="menu-item-price">Price</label>
-            <input type="number" 
-                   name="menu-item-price" 
-                   class="form-control"
-                   min="0" 
-                   step=".01"
-                   required />
+                <!-- Price -->
+                <label for="menu-item-price">Price</label>
+                <input type="number" 
+                    name="menu-item-price" 
+                    class="form-control"
+                    min="0" 
+                    step=".01"
+                    required />
 
-            <br />
+                <br />
 
-            <!-- Inventory -->
-            <label for="menu-item-qty">Inventory Count</label>
-            <input type="number" 
-                   name="menu-item-qty" 
-                   class="form-control"
-                   min="0"
-                   required />
+                <!-- Inventory -->
+                <label for="menu-item-qty">Inventory Count</label>
+                <input type="number" 
+                    name="menu-item-qty" 
+                    class="form-control"
+                    min="0"
+                    required />
 
-            <br />
+                <br />
 
-            <!-- Image URL -->
-            <label for="menu-item-img-url">Image URL</label>
-            <input type="url" 
-                   name="menu-item-img-url" 
-                   size="80" 
-                   class="form-control" />
+                <!-- Image URL -->
+                <label for="menu-item-img-url">Image URL</label>
+                <input type="url" 
+                    name="menu-item-img-url" 
+                    size="80" 
+                    class="form-control" />
 
-            <br />
+                <br />
 
-            <!-- Submit -->
-            <input type="submit" 
-                   name="menu-item-edit-execute-btn" 
-                   value="Submit" />
-        </form>
+                <!-- Submit -->
+                <input type="submit" 
+                    name="menu-item-edit-execute-btn" 
+                    value="Submit" />
+            </form>
+        </div>
 
 
         <!-- Close SQL Connection -->

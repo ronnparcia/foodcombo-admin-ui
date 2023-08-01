@@ -1,7 +1,9 @@
 /* Variables */
 
 :root {
-    --maroon: #2C202D;
+    --dark-purple: #362140;
+    --light-purple: #EBE9ED;
+    --magenta: #BE185D;
 }
 
 /* Typography */
@@ -16,7 +18,12 @@ h3,
 h4,
 h5,
 h6 {
+    color: var(--dark-purple);
     font-weight: 600;
+}
+
+body {
+    background-color: var(--light-purple);
 }
 
 /* Navbar */
@@ -25,7 +32,7 @@ nav {
     padding: 20px 0;
     margin-bottom: 30px;
 
-    background-color: var(--maroon);
+    background-color: var(--dark-purple);
     border-bottom: 1px solid lightgray;
 }
 

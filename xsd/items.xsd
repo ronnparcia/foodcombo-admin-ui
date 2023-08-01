@@ -46,14 +46,8 @@
         </xsd:simpleType>
     </xsd:element>
 
-    <xsd:element name="inventory">
-        <xsd:simpleType>
-            <!-- Price must only be positive integer -->
-            <xsd:restriction base="xsd:integer">
-                <xsd:minInclusive value="0" />
-            </xsd:restriction>
-        </xsd:simpleType>
-    </xsd:element>
+    <!-- Inventory must be positive integer -->
+    <xsd:element name="inventory" type="xsd:positiveInteger" />
 
     <xsd:element name="image">
         <xsd:simpleType>

@@ -27,7 +27,17 @@ else:
     <!-- Page Body -->
     <div class="container">
         <!-- Page Title -->
-        <h1>Combos</h1>
+        <div class="d-flex justify-content-between align-items-center my-5">
+            <!-- Page Title and Subtitle -->
+            <div>
+                <h1 class="page-title mb-1">Combos</h1>
+                <p class="page-subtitle">View existing combos or add new ones</p>
+            </div>
+            <!-- Add Buttons -->
+            <div>
+                <a href="combos-add.php" class="btn btn-primary">New Combo</a>    
+            </div>
+        </div>
 
 
         <!-- Alert Boxes -->
@@ -95,15 +105,6 @@ else:
             </tbody>
         </table>
 
-        
-        <br/><br/>
-        
-        <!-- Add Item -->
-        <h3>Add New Combo Item</h3>
-        <a href="combos-add.php" class="btn btn-outline-primary">Add New Combo</a>
-
-
-        <br/><br/>
 
         <!-- Close SQL Connection -->
         <?php mysqli_close($conn); ?>

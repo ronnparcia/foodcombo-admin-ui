@@ -83,6 +83,7 @@ else:
 
             <!-- Display record -->
             <?php if ($hasOrders): ?>
+                <!-- Show report details -->
                 <h4>Report for <?php echo date('F d, Y', strtotime($date)); ?></h4>
                 <table class="table w-50">
                     <tr>
@@ -98,6 +99,9 @@ else:
                         <td>Php <?php echo $totalEarned; ?></td>
                     </tr>
                 </table>
+                <!-- Generate XML -->
+                <?php require("report-generate-xml.php"); ?>
+                <a href="<?php echo $filePath; ?>" download>Export as XML</a>
             <?php endif; // For if (hasOrders) ?>
 
         <?php endif; // For if (isset) ?>

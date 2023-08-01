@@ -38,12 +38,12 @@ else:
             <!-- Add Buttons -->
             <div>
                 <a href="menu-add.php" class="btn btn-outline-primary me-2">New Item</a>
-                <button class="btn btn-outline-primary">Import Items (XML)</button>
+                <button onclick="showImportXML()" class="btn btn-outline-primary">Import Items (XML)</button>
             </div>
         </div>
 
         <!-- Import XML -->
-        <div id="import-xml-form" class="mb-5">
+        <div id="import-xml-form" class="mb-5" style="display: none;">
             <form action="menu-import-xml.php" method="post" enctype="multipart/form-data">
                 <div class="d-flex">
                     <!-- Upload Button -->
@@ -177,6 +177,9 @@ else:
         <?php mysqli_close($conn); ?>
 
     </div>
+
+    <!-- Script for Toggling XML Form -->
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -116,11 +116,11 @@ else:
 
 
         <!-- Table of Items -->
-        <table id="menu-table" class="table table-striped table-sm align-middle">
+        <table id="menu-table" class="table table-striped align-middle">
             <!-- Heading -->
             <thead>
                 <tr>
-                    <th><!-- Icon --></th>
+                    <th class="ps-4"><!-- Icon --></th>
                     <th>Item</th>
                     <th>Category</th>
                     <th>Price</th>
@@ -142,7 +142,7 @@ else:
 
                     <tr>
                         <!-- Icon, Item Name, Category, Price, Inventory Count -->
-                        <td><img src="<?php echo $itemsResult["image_url"]; ?>" /></td>
+                        <td class="ps-4"><img src="<?php echo $itemsResult["image_url"]; ?>" /></td>
                         <td><?php echo $itemsResult["item_name"]; ?></td>
                         <td><?php echo $itemsResult["category_name"]; ?></td>
                         <td>₱ <?php echo $itemsResult["price"]; ?></td>
@@ -151,14 +151,14 @@ else:
                         <td>
                             <form action="menu-edit.php" method="post">
                                 <input type="hidden" name="menu-item-id" value="<?php echo $itemsResult["item_id"]; ?>" />
-                                <input type="submit" name="menu-item-edit-btn" value="Edit" class="btn btn-sm btn-outline-secondary" />
+                                <input type="submit" name="menu-item-edit-btn" value="Edit" class="btn btn-sm btn-outline-primary" />
                             </form>
                         </td>
                         <!-- Delete -->
                         <td>
                             <form action="menu-delete.php" method="post">
                                 <input type="hidden" name="menu-item-id" value="<?php echo $itemsResult["item_id"]; ?>" />
-                                <input type="submit" name="menu-item-delete-btn" value="Delete" class="btn btn-sm btn-outline-secondary" />
+                                <input type="submit" name="menu-item-delete-btn" value="Delete" class="btn btn-sm btn-outline-primary" />
                             </form>
                         </td>
                     </tr>

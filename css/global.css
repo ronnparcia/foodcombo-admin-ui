@@ -73,6 +73,11 @@ nav #logout-wrapper {
     width: 30px;
 }
 
+.table thead th {
+    background-color: var(--dark-purple);
+    color: white;
+}
+
 /* Headings */
 
 h1.page-title {

@@ -37,8 +37,8 @@ else:
             </div>
             <!-- Add Buttons -->
             <div>
-                <a href="menu-add.php" class="btn btn-outline-primary me-2">New Item</a>
-                <button onclick="showImportXML()" class="btn btn-outline-primary">Import Items (XML)</button>
+                <a href="menu-add.php" class="btn btn-primary me-2">New Item</a>
+                <button onclick="showImportXML()" class="btn btn-primary">Import Items (XML)</button>
             </div>
         </div>
 

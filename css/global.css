@@ -78,3 +78,34 @@ nav #logout-wrapper {
 h1.page-title {
     font-size: 28px;
 }
+
+/* Buttons */
+
+.btn {
+    border-radius: 500px;
+    text-transform: uppercase;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--dark-purple);
+    border-color: var(--dark-purple);
+}
+
+.btn-primary:hover {
+    background-color: var(--magenta);
+    border-color: var(--magenta);
+}
+
+.btn-outline-primary {
+    border-color: var(--dark-purple);
+    color: var(--dark-purple);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--dark-purple);
+    border-color: var(--dark-purple);
+}

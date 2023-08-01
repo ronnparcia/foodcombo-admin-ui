@@ -27,7 +27,34 @@ else:
     <!-- Page Body -->
     <div class="container">
         <!-- Page Title -->
-        <h1>Menu Items</h1>
+        
+
+        <div class="d-flex justify-content-between align-items-center my-5">
+            <!-- Page Title and Subtitle -->
+            <div>
+                <h1 class="page-title mb-1">Menu Items</h1>
+                <p class="page-subtitle">Add new items, update item details, or remove an item</p>
+            </div>
+            <!-- Add Buttons -->
+            <div>
+                <a href="menu-add.php" class="btn btn-outline-primary me-2">New Item</a>
+                <button class="btn btn-outline-primary">Import Items (XML)</button>
+            </div>
+        </div>
+
+        <!-- Import XML -->
+        <div id="import-xml-form" class="mb-5">
+            <form action="menu-import-xml.php" method="post" enctype="multipart/form-data">
+                <div class="d-flex">
+                    <!-- Upload Button -->
+                    <input type="file" name="menu-uploaded-xml" class="form-control me-3" />
+
+                    <!-- Submit Button -->
+                    <input type="submit" name="menu-import-xml-btn" value="Upload XML" class="btn btn-outline-primary" />
+                </div>
+            </form>
+        </div>
+        
 
 
         <!-- Alert Boxes -->
@@ -143,25 +170,7 @@ else:
         
         <br/><br/>
         
-        <!-- Add Item -->
-        <h3>Add New Menu Item</h3>
-        <a href="menu-add.php" class="btn btn-outline-primary">Add Item</a>
-
-
-        <br/><br/>
-
-        <!-- Import XML -->
-        <form action="menu-import-xml.php" method="post" enctype="multipart/form-data">
-            <h3>Import XML Data</h3>
-
-            <!-- Upload Button -->
-            <input type="file" name="menu-uploaded-xml" class="form-control" />
-
-            <br/>
-
-            <!-- Submit Button -->
-            <input type="submit" name="menu-import-xml-btn" value="Import XML" class="btn btn-outline-primary" />
-        </form>
+        
 
 
         <!-- Close SQL Connection -->

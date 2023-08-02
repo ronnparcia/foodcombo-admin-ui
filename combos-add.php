@@ -56,56 +56,66 @@ else:
                 <label for="combo-name">Combo Name</label>
                 <input type="text" 
                     name="combo-name" 
-                    class="form-control"
+                    class="form-control w-75"
                     required />
 
                 <br />
 
-                <!-- Mains Dropdown -->
-                <label for="combos-main">Main</label>
-                <select name="combos-main" class="form-select">
-                    <!-- Create a dropdown option for each item -->
-                    <?php while ($mainsResult = mysqli_fetch_assoc($mainsQuery)) : ?>
+                <div class="d-flex">
+                    <!-- Mains Dropdown -->
+                    <div class="me-3">
+                        <label for="combos-main">Main</label>
+                        <select name="combos-main" class="form-select">
+                            <!-- Create a dropdown option for each item -->
+                            <?php while ($mainsResult = mysqli_fetch_assoc($mainsQuery)) : ?>
 
-                        <!-- Display dropdown option -->
-                        <option value="<?php echo $mainsResult["item_id"]; ?>">
-                            <?php echo $mainsResult["item_name"]; ?>
-                        </option>
+                                <!-- Display dropdown option -->
+                                <option value="<?php echo $mainsResult["item_id"]; ?>">
+                                    <?php echo $mainsResult["item_name"]; ?>
+                                </option>
 
-                    <?php endwhile; ?>
-                </select>
+                            <?php endwhile; ?>
+                        </select>
+                    </div>
 
-                <br />
+                    <br />
 
-                <!-- Sides Dropdown -->
-                <label for="combos-side">Side</label>
-                <select name="combos-side" class="form-select">
-                    <!-- Create a dropdown option for each item -->
-                    <?php while ($sidesResult = mysqli_fetch_assoc($sidesQuery)) : ?>
+                    <!-- Sides Dropdown -->
+                    <div class="me-3">
+                        <label for="combos-side">Side</label>
+                        <select name="combos-side" class="form-select">
+                            <!-- Create a dropdown option for each item -->
+                            <?php while ($sidesResult = mysqli_fetch_assoc($sidesQuery)) : ?>
 
-                        <!-- Display dropdown option -->
-                        <option value="<?php echo $sidesResult["item_id"]; ?>">
-                            <?php echo $sidesResult["item_name"]; ?>
-                        </option>
+                                <!-- Display dropdown option -->
+                                <option value="<?php echo $sidesResult["item_id"]; ?>">
+                                    <?php echo $sidesResult["item_name"]; ?>
+                                </option>
 
-                    <?php endwhile; ?>
-                </select>
+                            <?php endwhile; ?>
+                        </select>
+                    </div>
 
-                <br />
+                    <br />
 
-                <!-- Mains Dropdown -->
-                <label for="combos-drink">Drink</label>
-                <select name="combos-drink" class="form-select">
-                    <!-- Create a dropdown option for each item -->
-                    <?php while ($drinksResult = mysqli_fetch_assoc($drinksQuery)) : ?>
+                    <!-- Mains Dropdown -->
+                    <div class="me-3">
+                        <label for="combos-drink">Drink</label>
+                        <select name="combos-drink" class="form-select">
+                            <!-- Create a dropdown option for each item -->
+                            <?php while ($drinksResult = mysqli_fetch_assoc($drinksQuery)) : ?>
 
-                        <!-- Display dropdown option -->
-                        <option value="<?php echo $drinksResult["item_id"]; ?>">
-                            <?php echo $drinksResult["item_name"]; ?>
-                        </option>
+                                <!-- Display dropdown option -->
+                                <option value="<?php echo $drinksResult["item_id"]; ?>">
+                                    <?php echo $drinksResult["item_name"]; ?>
+                                </option>
 
-                    <?php endwhile; ?>
-                </select>
+                            <?php endwhile; ?>
+                        </select>
+                    </div>
+
+                    <br />
+                </div>
 
                 <br />
 
@@ -113,7 +123,7 @@ else:
                 <label for="combo-discount-pct">Discount (%)</label>
                 <input type="number" 
                     name="combo-discount-pct" 
-                    class="form-control"
+                    class="form-control w-25"
                     min="1"
                     max="100"
                     required />

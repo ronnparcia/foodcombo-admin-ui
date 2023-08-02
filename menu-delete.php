@@ -53,8 +53,8 @@ else:
 
         <div class="white-box">
             <!-- Display item information -->
-            <h4>Are you sure you want to delete this item?</h4>
-            <table class="table align-middle">
+            <h4 class="mb-4">Are you sure you want to delete this item?</h4>
+            <table class="table align-middle mb-4">
                 <thead>
                     <tr>
                         <th><!-- Icon --></th>

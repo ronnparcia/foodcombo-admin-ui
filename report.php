@@ -93,8 +93,8 @@ else:
             <?php if ($hasOrders): ?>
                 <div class="white-box">
                     <!-- Show report details -->
-                    <h4>Report for <?php echo date('F d, Y', strtotime($date)); ?></h4>
-                    <table class="table w-50">
+                    <h4 class="mb-4">Report for <?php echo date('F d, Y', strtotime($date)); ?></h4>
+                    <table class="table w-50 mb-4">
                         <tr>
                             <td>Total dishes sold: </td>
                             <td><?php echo $totalDishes; ?></td>

@@ -26,7 +26,7 @@ else:
     <?php require("reusable-ui/navbar.php"); ?>
 
     <!-- Page Body -->
-    <div class="container">
+    <div class="container pb-5">
         <!-- Page Title -->
         <div class="d-flex justify-content-between align-items-center my-5">
             <!-- Page Title and Subtitle -->

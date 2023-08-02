@@ -12,7 +12,8 @@
         
         <!-- Logout -->
         <div id="logout-wrapper" class="">
-            <li><a href="logout.php">Logout (<?php echo $_SESSION["account_name"]; ?>)</a></li>
+            <span class="nav-user"><?php echo $_SESSION["account_name"]; ?></span>
+            <a href="logout.php">Logout</a>
         </div>
     </div>
 </nav>

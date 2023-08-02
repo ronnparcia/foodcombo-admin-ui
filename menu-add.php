@@ -51,14 +51,14 @@ else:
                 <label for="menu-item-name">Item Name</label>
                 <input type="text" 
                     name="menu-item-name" 
-                    class="form-control"
+                    class="form-control w-50"
                     required />
 
                 <br />
 
                 <!-- Category Dropdown -->
                 <label for="menu-item-category">Category</label>
-                <select name="menu-item-category" class="form-select">
+                <select name="menu-item-category" class="form-select w-50">
                     <!-- Create a dropdown option for each category -->
                     <?php while ($categoriesResult = mysqli_fetch_assoc($categoriesQuery)) : ?>
 
@@ -76,7 +76,7 @@ else:
                 <label for="menu-item-price">Price</label>
                 <input type="number" 
                     name="menu-item-price" 
-                    class="form-control"
+                    class="form-control w-25"
                     min="0" 
                     step=".01"
                     required />
@@ -87,7 +87,7 @@ else:
                 <label for="menu-item-qty">Inventory Count</label>
                 <input type="number" 
                     name="menu-item-qty" 
-                    class="form-control"
+                    class="form-control w-25"
                     min="0"
                     required />
 

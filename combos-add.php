@@ -31,6 +31,13 @@ else:
             <h1 class="page-title mb-1">Add Combo</h1>
         </div>
 
+        <!-- Alert Boxes -->
+        <?php 
+        // Attempted to access page without clicking edit or delete button
+        if (isset($_GET["noDataSent"])) {
+            echo '<div class="alert alert-warning">Warning: Create a combo here first.</div>';
+        }
+        ?>
         
         <!-- Connect to Database -->
         <?php

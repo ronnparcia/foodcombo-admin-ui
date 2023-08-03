@@ -1,5 +1,5 @@
 <?php 
-// TODO: Add condition that checks if the submit button was clicked. Do this for the rest of the form redirects.
+// Checks if the submit button was clicked. Do this for the rest of the form redirects.
 if (!isset($_POST["combos-add-execute-btn"])) {
     header("location:combos-add.php?noDataSent=1");
 } else {

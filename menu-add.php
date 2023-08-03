@@ -31,6 +31,14 @@ else:
             <h1 class="page-title mb-1">Add Menu Item</h1>
         </div>
 
+        <!-- Alert Boxes -->
+        <?php 
+        // Attempted to access page without submit button
+        if (isset($_GET["noDataSent"])) {
+            echo '<div class="alert alert-warning">Warning: Create an item here first.</div>';
+        }
+        ?>
+
         
         <!-- Connect to Database -->
         <?php

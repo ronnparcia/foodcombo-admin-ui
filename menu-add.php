@@ -104,7 +104,7 @@ else:
 
                 <!-- Submit -->
                 <input type="submit" 
-                    name="menu-item-edit-execute-btn" 
+                    name="menu-item-add-execute-btn" 
                     value="Submit" />
             </form>
         </div>

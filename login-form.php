@@ -16,7 +16,7 @@ require("reusable-snippets/show-errors.php");
     <!-- Page Body -->
     <div class="container py-5">
 
-        <div class="white-box p-0 mx-auto">
+        <div class="white-box p-0 mx-auto overflow-hidden">
             <div class="login-logo-box px-5 py-4">
                 <img src="assets/logo.png" alt="">
             </div>    

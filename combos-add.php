@@ -33,7 +33,7 @@ else:
 
         <!-- Alert Boxes -->
         <?php 
-        // Attempted to access page without clicking edit or delete button
+        // Attempted to access page without submit button
         if (isset($_GET["noDataSent"])) {
             echo '<div class="alert alert-warning">Warning: Create a combo here first.</div>';
         }

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<items>
+    <item>
+        <name>Coffee</name>
+        <category>Drinks</category>
+        <price>90</price>
+        <inventory>40</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/coffee.png</image>
+    </item>
+    <item>
+        <name>Coke</name>
+        <category>Drinks</category>
+        <price>70</price>
+        <inventory>55</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/coke.png</image>
+    </item>
+    <item>
+        <name>Milk Tea</name>
+        <category>Drinks</category>
+        <price>110</price>
+        <inventory>30</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/milk-tea.png</image>
+    </item>
+    <item>
+        <name>Wine</name>
+        <category>Drinks</category>
+        <price>180</price>
+        <inventory>10</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/wine.png</image>
+    </item>
+</items>
+  

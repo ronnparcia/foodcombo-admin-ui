@@ -135,7 +135,7 @@ else:
 
                     <!-- Append New Report to Existing XML -->
                     <form action="report-append-xml.php" method="post" enctype="multipart/form-data">
-                        <p class="mt-5 mb-3">You may also append this report to a XML containing multiple reports:</p>
+                        <p class="mt-5 mb-3">You may also append this report to an existing XML file:</p>
                         <div class="d-flex">
                             <!-- Hidden Data to be Posted -->
                             <input type="hidden" name="report-date" value="<?php echo $date; ?>">

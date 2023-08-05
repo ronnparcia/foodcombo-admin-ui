@@ -24,8 +24,7 @@ if (!isset($_FILES["report-uploaded-xml"])) { // If no file uploaded
 
     // Save XML file
     header('Content-type: text/xml');
-    header('Content-Disposition: attachment; filename="text.xml"');
-
+    header('Content-Disposition: attachment; filename="appended-reports.xml"');
     echo $reports->asXML();
 
     // header("location:report.php");

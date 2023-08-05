@@ -105,7 +105,7 @@ else:
 
             <!-- Display record -->
             <?php if ($hasOrders): ?>
-                <div class="white-box">
+                <div class="white-box mb-5">
                     <!-- Show report details -->
                     <h4 class="mb-4">Report for <?php echo date('F d, Y', strtotime($date)); ?></h4>
                     <table class="table w-50 mb-4">

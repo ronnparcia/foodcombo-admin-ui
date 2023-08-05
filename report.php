@@ -118,12 +118,15 @@ else:
                         </tr>
                     </table>
 
-                    <!-- Generate XML -->
-                    <?php require("report-generate-xml.php"); ?>
-                    <a href="<?php echo $filePath; ?>"
-                    class="btn btn-outline-primary"
-                    download>
-                    Export as XML</a>
+                    <!-- Generate XML (New) -->
+                    <form action="report-generate-xml.php" method="post">
+                        <input type="hidden" name="report-date" value="<?php echo $date; ?>">
+                        <input type="hidden" name="report-total-dishes" value="<?php echo $totalDishes; ?>">
+                        <input type="hidden" name="report-total-discount" value="<?php echo $totalDiscount; ?>">
+                        <input type="hidden" name="report-total-earned" value="<?php echo $totalEarned; ?>">
+
+                        <input type="submit" value="Export as XML" class="btn btn-outline-primary">
+                    </form>
 
                     <!-- Append New Report to Existing XML -->
                     <form action="report-append-xml.php" method="post" enctype="multipart/form-data">

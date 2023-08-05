@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <!-- Root "report" -->
+    <!-- Root "reports" -->
+    <xsd:element name="reports">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="report" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <!-- Referenced "report" -->
     <xsd:element name="report">
         <xsd:complexType>
             <xsd:sequence>
@@ -12,7 +21,7 @@
         </xsd:complexType>
     </xsd:element>
 
-    <!-- Referenced chidlren -->
+    <!-- Referenced children of report -->
     <xsd:element name="date" type="xsd:date" />
 
     <xsd:element name="dishesSold" type="xsd:positiveInteger"/>

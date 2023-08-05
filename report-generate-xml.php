@@ -24,7 +24,7 @@ $report->addChild("totalEarnings", $_POST["report-total-earned"]);
 
 // Save XML file
 header('Content-type: text/xml');
-header('Content-Disposition: attachment; filename="appended-reports.xml"');
+header('Content-Disposition: attachment; filename="new-report.xml"');
 echo $reports->asXML();
 
 ?>

@@ -1,36 +1,39 @@
 <?xml version="1.0"?>
 <items>
     <item>
-        <name>Lumpiang Shanghai</name>
+        <name>Fruits</name>
+        <category>Sides</category>
+        <price>100</price>
+        <inventory>30</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/fruits.png</image>
+    </item>
+    <item>
+        <name>Ice Cream</name>
         <category>Sides</category>
         <price>80</price>
+        <inventory>50</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/ice-cream.png</image>
+    </item>
+    <item>
+        <name>Laksa</name>
+        <category>Mains</category>
+        <price>180</price>
         <inventory>20</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/laksa.png</image>
     </item>
     <item>
-        <name>Buko Pandan</name>
-        <category>Sides</category>
-        <price>90</price>
-        <inventory>8</inventory>
-        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
-    </item>
-    <item>
-        <name>Lechon Kawali</name>
+        <name>Pizza</name>
         <category>Mains</category>
-        <price>200</price>
-        <inventory>10</inventory>
-        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
-    </item>
-    <item>
-        <name>Pancit Canton</name>
-        <category>Mains</category>
-        <price>120</price>
+        <price>300</price>
         <inventory>15</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/pizza.png</image>
     </item>
     <item>
-        <name>Sago't Gulaman</name>
-        <category>Drinks</category>
-        <price>70</price>
-        <inventory>30</inventory>
-        <image>https://images.emojiterra.com/google/android-10/512px/1f535.png</image>
+        <name>Ramen</name>
+        <category>Mains</category>
+        <price>250</price>
+        <inventory>40</inventory>
+        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/ramen.png</image>
     </item>
 </items>
+  

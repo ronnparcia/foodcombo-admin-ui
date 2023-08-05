@@ -41,6 +41,11 @@ else:
         if (isset($_GET["uploadFailed"])) {
             echo '<div class="alert alert-danger">Error: File upload failed.</div>';
         }
+
+        // Attempted to generate xml without visiting this page
+        if (isset($_GET["noDataSent"])) {
+            echo '<div class="alert alert-warning">Warning: Select a date here first.</div>';
+        }
         ?>
 
 
@@ -125,7 +130,7 @@ else:
                         <input type="hidden" name="report-total-discount" value="<?php echo $totalDiscount; ?>">
                         <input type="hidden" name="report-total-earned" value="<?php echo $totalEarned; ?>">
 
-                        <input type="submit" value="Export as XML" class="btn btn-outline-primary">
+                        <input type="submit" name="report-export-btn" value="Export as XML" class="btn btn-outline-primary">
                     </form>
 
                     <!-- Append New Report to Existing XML -->

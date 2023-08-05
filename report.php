@@ -35,6 +35,15 @@ else:
             </div>
         </div>
 
+         <!-- Alert Boxes -->
+         <?php 
+        // File upload failed
+        if (isset($_GET["uploadFailed"])) {
+            echo '<div class="alert alert-danger">Error: File upload failed.</div>';
+        }
+        ?>
+
+
         <div class="white-box">
             <!-- Form -->
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">

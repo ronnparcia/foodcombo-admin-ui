@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<reports>
+    <report>
+        <date>2023-06-24</date>
+        <dishesSold>228</dishesSold>
+        <totalDiscount>1852.5</totalDiscount>
+        <totalEarnings>36657.5</totalEarnings>
+    </report>
+</reports>

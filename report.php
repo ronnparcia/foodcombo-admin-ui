@@ -108,12 +108,28 @@ else:
                             <td>Php <?php echo $totalEarned; ?></td>
                         </tr>
                     </table>
+
                     <!-- Generate XML -->
                     <?php require("report-generate-xml.php"); ?>
                     <a href="<?php echo $filePath; ?>"
                     class="btn btn-outline-primary"
                     download>
                     Export as XML</a>
+
+                    <!-- Append New Report to Existing XML -->
+                    <form action="report-append-xml.php" method="post" enctype="multipart/form-data">
+                        <p class="mt-5 mb-3">You may also append this report to a XML containing multiple reports:</p>
+                        <div class="d-flex">
+                            <!-- Hidden Data to be Posted -->
+                            <input type="hidden" name="report-date" value="<?php echo $date; ?>">
+                            <input type="hidden" name="report-total-dishes" value="<?php echo $totalDishes; ?>">
+                            <input type="hidden" name="report-total-discount" value="<?php echo $totalDiscount; ?>">
+                            <input type="hidden" name="report-total-earned" value="<?php echo $totalEarned; ?>">
+
+                            <input type="file" name="report-uploaded-xml"  class="form-control me-3">
+                            <input type="submit" value="Append to XML" class="btn btn-outline-primary">
+                        </div>
+                    </form>
                 </div>
             <?php endif; // For if (hasOrders) ?>
 

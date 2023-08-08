@@ -19,6 +19,14 @@ Before running either the Phase 1 or Phase 2 application, import the `db_machine
 
 ## Screenshots
 
+#### Login Page
 ![](https://i.imgur.com/TQrdk70.png)
+
+#### Manage Menu Items
 ![](https://i.imgur.com/PvAo9FS.png)
+
+#### Manage Combos
 ![](https://i.imgur.com/jg3YLAO.png)
+
+#### Daily Summary Report
+![](https://i.imgur.com/pCVdQUj.png)

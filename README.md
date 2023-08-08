@@ -16,3 +16,9 @@ Before running either the Phase 1 or Phase 2 application, import the `db_machine
 
 > **Username:** `rparcia`<br>
 **Password:** `par1234`
+
+## Screenshots
+
+![](https://i.imgur.com/TQrdk70.png)
+![](https://i.imgur.com/PvAo9FS.png)
+![](https://i.imgur.com/jg3YLAO.png)

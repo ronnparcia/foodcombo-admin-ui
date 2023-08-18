@@ -5,7 +5,7 @@
         <category>Mains</category>
         <price>180</price>
         <inventory>50</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/burger.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/burger.png</image>
     </item>
     <item>
         <name>Cake</name>
@@ -18,21 +18,21 @@
         <category>Sides</category>
         <price>70</price>
         <inventory>40</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/cookie.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/cookie.png</image>
     </item>
     <item>
         <name>Dumplings</name>
         <category>Mains</category>
         <price>150</price>
         <inventory>35</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/dumplings.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/dumplings.png</image>
     </item>
     <item>
         <name>French Fries</name>
         <category>Sides</category>
         <price>90</price>
         <inventory>25</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/french-fries.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/french-fries.png</image>
     </item>
 </items>
   

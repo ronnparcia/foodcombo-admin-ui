@@ -25,7 +25,7 @@ if (!isset($_FILES["menu-uploaded-xml"])) { // If no file uploaded
         // Image
         // Set default image if image is empty
         if ($item->image == "") {
-            $imageURL = 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/default.png';
+            $imageURL = 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/default.png';
         } else {
             $imageURL = $item->image;
         }

@@ -100,7 +100,7 @@ CREATE TABLE `tbl_items` (
   `category_name` varchar(50) NOT NULL,
   `price` float NOT NULL,
   `inventory_qty` int(11) NOT NULL DEFAULT 100,
-  `image_url` varchar(255) DEFAULT 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/default.png'
+  `image_url` varchar(255) DEFAULT 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -108,15 +108,15 @@ CREATE TABLE `tbl_items` (
 --
 
 INSERT INTO `tbl_items` (`item_id`, `item_name`, `category_name`, `price`, `inventory_qty`, `image_url`) VALUES
-(1, 'Steak', 'Mains', 900, 78, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/steak.png'),
-(2, 'Salmon', 'Mains', 850, 79, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/salmon.png'),
-(3, 'Chicken', 'Mains', 500, 71, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/chicken.png'),
-(4, 'Baked Potato', 'Sides', 80, 95, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/baked-potato.png'),
-(5, 'Mashed Potato', 'Sides', 75, 30, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/mashed-potato.png'),
-(6, 'Steamed Veggies', 'Sides', 50, 70, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/steamed-vegetables.png'),
-(7, 'Iced Tea', 'Drinks', 55, 70, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/iced-tea.png'),
-(8, 'Root Beer', 'Drinks', 60, 97, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/root-beer.png'),
-(9, 'Water', 'Drinks', 25, 88, 'https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/water.png');
+(1, 'Steak', 'Mains', 900, 78, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/steak.png'),
+(2, 'Salmon', 'Mains', 850, 79, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/salmon.png'),
+(3, 'Chicken', 'Mains', 500, 71, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/chicken.png'),
+(4, 'Baked Potato', 'Sides', 80, 95, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/baked-potato.png'),
+(5, 'Mashed Potato', 'Sides', 75, 30, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/mashed-potato.png'),
+(6, 'Steamed Veggies', 'Sides', 50, 70, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/steamed-vegetables.png'),
+(7, 'Iced Tea', 'Drinks', 55, 70, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/iced-tea.png'),
+(8, 'Root Beer', 'Drinks', 60, 97, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/root-beer.png'),
+(9, 'Water', 'Drinks', 25, 88, 'https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/water.png');
 
 -- --------------------------------------------------------
 

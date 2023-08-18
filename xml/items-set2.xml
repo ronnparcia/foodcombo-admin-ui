@@ -5,14 +5,14 @@
         <category>Sides</category>
         <price>100</price>
         <inventory>30</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/fruits.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/fruits.png</image>
     </item>
     <item>
         <name>Ice Cream</name>
         <category>Sides</category>
         <price>80</price>
         <inventory>50</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/ice-cream.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/ice-cream.png</image>
     </item>
     <item>
         <name>Laksa</name>
@@ -25,14 +25,14 @@
         <category>Mains</category>
         <price>300</price>
         <inventory>15</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/pizza.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/pizza.png</image>
     </item>
     <item>
         <name>Ramen</name>
         <category>Mains</category>
         <price>250</price>
         <inventory>40</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/ramen.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/ramen.png</image>
     </item>
 </items>
   

@@ -5,21 +5,21 @@
         <category>Sides</category>
         <price>120</price>
         <inventory>30</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/salad.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/salad.png</image>
     </item>
     <item>
         <name>Spaghetti</name>
         <category>Mains</category>
         <price>200</price>
         <inventory>25</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/spaghetti.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/spaghetti.png</image>
     </item>
     <item>
         <name>Steamed Rice</name>
         <category>Sides</category>
         <price>50</price>
         <inventory>100</inventory>
-        <image>https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/steamed-rice.png</image>
+        <image>https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/steamed-rice.png</image>
     </item>
 </items>
   

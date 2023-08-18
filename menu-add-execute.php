@@ -18,7 +18,7 @@ if (!isset($_POST["menu-item-add-execute-btn"])) {
 
     // Check if imageURL is empty. Set a default value
     if ($imageURL == "") {
-        $imageURL = "https://raw.githubusercontent.com/ronnparcia/itprog-mp-icons/main/default.png";
+        $imageURL = "https://raw.githubusercontent.com/ronnparcia/foodcombo-icons/main/default.png";
     }
 
     // SQL

@@ -1,6 +1,6 @@
-# IT-PROG Project: Phase 2—Administrator's Dashboard
+# Y2 T3 College Project: Phase 2—Administrator's Dashboard
 
-A user interface for modifying the [combo meal ordering system](https://github.com/ronnparcia/itprog-phase1-flask)'s (Phase 1) list of menu items and combos, and generating daily summary reports.
+A user interface for modifying the [combo meal ordering system](https://github.com/ronnparcia/foodcombo-client-ui)'s (Phase 1) list of menu items and combos, and generating daily summary reports.
 
 The project specifications required that this application must use PHP, MySQL, and XML.
 
